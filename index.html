@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./css/main.min.css">
+        <title>Card Ingresso</title>
+    </head>
+
+    <body>
+        <section class="s-ticket">
+            <div class="ticket-wrapper" id="ticketWrapper" data-tilt>
+                <div class="ticket-card">
+                    <!-- Frente da carta -->
+                    <div class="ticket ticket--front">
+                        <div class="image">
+                            <img src="./img/images.jpeg" alt="Ingresso" class="ticket__image">
+                            <span>LEGENDADO</span>
+                        </div>
+                        <div class="info">
+                            <h1>Homem Aranha: Através do Aranhaverso</h1>
+                            <ul>
+                                <li>
+                                    <span>Sala</span>
+                                    <strong>01</strong>
+                                </li>
+                                <li>
+                                    <span>Fileira</span>
+                                    <strong>F</strong>
+                                </li>
+                                <li>
+                                    <span>Poltrona</span>
+                                    <strong>8</strong>
+                                </li>
+                                <li>
+                                    <span>Data</span>
+                                    <strong>16 Dez 2022</strong>
+                                </li>
+                                <li>
+                                    <span>Sessão</span>
+                                    <strong>16:00</strong>
+                                </li>
+                                <li>
+                                    <span>Valor</span>
+                                    <strong>R$ 50,00</strong>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="barcode">    
+                            <img src="./img/barcode.png" alt="barcode">
+                        </div>
+                    </div>
+
+                    <!-- Verso da carta -->
+                    <div class="ticket ticket--back">
+                        <div class="image">
+                        <img src="./img/another-image.jpeg" alt="Ingresso 2" class="ticket__image">
+                        <span>DUBLADO</span>
+                        </div>
+                        <div class="info">
+                        <h1>Matrix: Ressurrections</h1>
+                        <ul>
+                            <li><span>Sala</span><strong>05</strong></li>
+                            <li><span>Fileira</span><strong>D</strong></li>
+                            <li><span>Poltrona</span><strong>12</strong></li>
+                            <li><span>Data</span><strong>20 Dez 2022</strong></li>
+                            <li><span>Sessão</span><strong>19:30</strong></li>
+                            <li><span>Valor</span><strong>R$ 70,00</strong></li>
+                        </ul>
+                        </div>
+                        <div class="barcode">
+                        <img src="./img/barcode.png" alt="barcode">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <script src="./js/vanilla-tilt.min.js"></script>
+        <script>
+            const ticketCard = document.querySelector('.ticket-card');
+          
+            ticketCard.addEventListener('click', () => {
+              ticketCard.classList.toggle('flipped');
+            });
+          </script>
+    </body>
+
+</html>
